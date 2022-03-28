@@ -1,0 +1,1929 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=Poppins:wght@300&display=swap"
+        rel="stylesheet">
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+    <script src="project4script.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+</head>
+<style>
+    #sec1 {
+
+        min-height: 100vh;
+    }
+
+    #sec2 {
+
+        min-height: auto;
+        padding-top: 6vw;
+        padding-bottom: 7vw;
+    }
+
+    #sec3 {
+        background-color: whitesmoke;
+        min-height: auto;
+        padding-bottom: 6vw;
+        padding-top: 7vw;
+    }
+
+    #sec4 {
+        background-color: rgb(255, 17, 17);
+        min-height: auto;
+        padding-top: 0%;
+        padding-bottom: 0px;
+    }
+
+    #sec6 {
+        background-color: white;
+        min-height: auto;
+        padding-top: 8vw;
+        padding-bottom: 9vw;
+    }
+
+    #sec5 {
+        background-color: whitesmoke;
+        min-height: auto;
+        padding-top: 2vw;
+    }
+
+    * {
+        padding: 0px;
+        margin: 0px;
+        text-decoration: none;
+        list-style: none;
+        box-sizing: border-box;
+    }
+
+    #navigation nav {
+        background-color: white;
+        height: 50px;
+        width: 100%;
+        position: fixed;
+        z-index: 2;
+    }
+
+    #navigation label.logo1 {
+        color: black;
+        font-size: 30px;
+        line-height: 50px;
+        padding-left: 50px;
+        font-weight: bold;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    }
+
+    #navigation label.logo1:hover {
+        color: rgb(32, 110, 228);
+    }
+
+    #navigation label.logo2 {
+        display: none;
+    }
+
+    #navigation .hidd {
+        display: none;
+    }
+
+    #navigation nav ul {
+        float: right;
+        margin-right: 20px;
+    }
+
+    #navigation nav ul li {
+        display: inline-block;
+        line-height: 50px;
+        margin: 0 5px;
+    }
+
+    #navigation nav ul li a {
+        color: rgb(3, 3, 3);
+        font-size: 17px;
+        padding: 7px 13px;
+        border-radius: 3px;
+        text-transform: uppercase;
+        font-family: 'Poppins', sans-serif;
+    }
+
+    #navigation .span {
+        color: rgb(45, 147, 255);
+    }
+
+    #navigation a.active,
+    .ho:hover {
+        background-color: rgb(216, 216, 216);
+        transition: .5s;
+    }
+
+    #navigation .checkbtn {
+        font-size: 20px;
+        color: black;
+        float: right;
+        line-height: 50px;
+        margin-right: 40px;
+        cursor: pointer;
+        display: none;
+    }
+
+    #navigation #check {
+        display: none;
+    }
+
+    @media (max-width:952px) {
+        #navigation label.logo1 {
+            font-size: 30px;
+            padding-left: 50px;
+            color: black;
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        }
+
+        #navigation nav ul li a {
+            font-size: 14px;
+            color: black;
+        }
+    }
+
+    @media (max-width:877px) {
+        #navigation .checkbtn {
+            display: block;
+        }
+
+        #navigation ul {
+            position: fixed;
+            width: 350px;
+            height: 100vh;
+            background: rgb(0, 0, 0);
+            top: 50px;
+            left: -110%;
+            text-align: center;
+            transition: 0.5s;
+        }
+
+        #navigation nav ul li {
+            display: block;
+            margin: 50px 0px -6px;
+            line-height: 30px;
+        }
+
+        #navigation nav ul li a {
+            font-size: 20px;
+            color: white;
+        }
+
+        #navigation .ho:hover,
+        a.active {
+            background: none;
+            color: rgb(179, 179, 179);
+        }
+
+        #navigation #check:checked~ul {
+            left: 0px;
+        }
+    }
+
+    @media (max-width:430px) {
+        #navigation .logo1 {
+            display: none;
+        }
+
+        #navigation label.logo2 {
+            display: block;
+            color: rgb(12, 12, 11);
+            font-size: 35px;
+            line-height: 50px;
+            padding-left: 50px;
+            font-weight: bold;
+
+        }
+
+        #navigation .hidd {
+            display: block;
+            color: rgb(255, 254, 254);
+            font-size: 30px;
+            text-align: center;
+
+            font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+
+
+        }
+
+        #navigation nav ul li {
+            display: block;
+            margin: 32px 0px -6px;
+            line-height: 30px;
+        }
+    }
+
+    @media (max-width:430px) {
+        #navigation ul {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            background: rgb(0, 0, 0);
+            top: 50px;
+            left: -110%;
+            text-align: center;
+            transition: 0.5s;
+        }
+    }
+
+    @media (max-width:305px) {
+        #navigation .hidd {
+            font-size: 24px;
+        }
+    }
+
+    /* section of navuigation bar ends here */
+
+    /* --------------------------------------------------------- */
+
+    /* section of parallex is started here */
+
+
+    .parallax {
+        
+        /* The image used */
+        background-image: url("software.jpg");
+
+        /* Set a specific height */
+        min-height: auto;
+
+        /* Create the parallax scrolling effect */
+        background-attachment: fixed;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    #sec1 .set {
+        text-align: center;
+        margin: auto;
+        justify-content: center;
+        padding-top: 45vh;
+        color: white;
+        font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+    }
+
+    #sec1 .txt-rotate {
+        color: rgb(45, 147, 255);
+    }
+
+
+    #sec1 .mid1 {
+        font-weight: bold;
+        margin: 0em 0;
+        font-size: 4em;
+    }
+
+    #sec1 .mid2 {
+        color: white;
+        font-size: 1.8em;
+    }
+
+    @media (max-width:941px) {
+
+        #sec1 .mid1 {
+            font-weight: bold;
+            margin: 0em 0;
+            font-size: 3.5em;
+        }
+
+        #sec1 .mid2 {
+            color: whitesmoke;
+            font-size: 1.2em;
+        }
+
+
+    }
+    @media (max-width:663px) {
+
+#sec1 .mid1 {
+    font-weight: bold;
+    margin: 0em 0;
+    font-size: 2.5em;
+}
+
+#sec1 .mid2 {
+    color: whitesmoke;
+    font-size: 1em;
+}
+
+
+}
+
+    @media (max-width:468px) {
+
+        #sec1 .mid1 {
+            font-weight: bold;
+            margin: 0.2em 0;
+            font-size: 2em;
+        }
+
+        #sec1 .mid2 {
+            color: whitesmoke;
+            font-size: .8em;
+        }
+    }
+
+    /* our services section starts here */
+
+    #services .container {
+        width: 80%;
+        margin: 0vw auto;
+        font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+    }
+
+    #services .icon {
+        display: flex;
+        flex-direction: row;
+    }
+
+    #services .fa {
+        padding-right: 10px;
+        display: inline;
+        color: rgb(32, 110, 228);
+    }
+
+    #services h1 {
+        display: inline;
+        font-size: 25px;
+
+    }
+
+    #services .line {
+
+        border: 2px rgb(32, 110, 228) solid;
+        width: 50px;
+        margin: auto;
+        justify-content: center;
+        background-color: rgb(32, 110, 228);
+
+    }
+
+    #services .heading {
+
+      
+        text-align: center;
+        font-size: 20px;
+        margin-bottom: 4vw;
+
+    }
+
+    #services .heading h1 {
+        font-size: 40px;
+        color: black;
+    }
+
+    #services .row {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        flex-flow: wrap;
+    }
+
+    #services .card {
+        font-size: 12px;
+        background: none;
+        cursor: pointer;
+        z-index: 1;
+        color: rgb(0, 0, 0);
+        width: 30%;
+        /* background: linear-gradient( to left, #ebebeb 50%,     red    50% ); */
+        position: sticky;
+        margin-bottom: 43px;
+        border: rgb(224, 224, 224) .2px solid;
+        /* background-size: 200% 100%;
+    background-position: right bottom;*/
+        transition: all ease .3s;
+
+    }
+
+    #services .card::after {
+        background: rgb(32, 32, 32);
+        content: '';
+        position: absolute;
+        z-index: -1;
+        -webkit-transition: all 0.3s;
+        -moz-transition: all 0.3s;
+        -o-transition: all 0.3s;
+        transition: all 0.3s;
+        height: 0;
+        left: 0;
+        top: 0;
+        width: 100%;
+    }
+
+    #services .card:hover {
+        color: whitesmoke;
+    }
+
+    #services .btn-1:hover:after {
+        height: 100%;
+
+    }
+
+    #services .classheader {
+        text-align: center;
+        padding: 18px 10px;
+
+    }
+
+    #services .cardbody {
+        padding: 10px 20px;
+        text-align: justify;
+        font-size: 18px;
+        color: rgb(139, 139, 139);
+        
+    }
+
+    #services .card:hover {
+        transform: scale(1.05);
+        box-shadow: 0 0 4px 0px rgba(31, 30, 30, 0.692);
+
+    }
+
+    /* responsive media quary */
+    @media screen and (max-width:1259px) {
+        #services .card {
+            width: 45%;
+        }
+    }
+
+    @media screen and (max-width:839px) {
+        #services .container {
+            width: 100%;
+        }
+
+        #services .heading {
+            padding: 20px;
+            font-size: 20px;
+        }
+
+        #services .card {
+            width: 80%;
+        }
+    }
+
+    @media screen and (max-width:427px) {
+        #services .card {
+            font-size: 13px;
+        }
+
+        #services .cardbody {
+            padding: 10px 20px;
+            text-align: justify;
+            font-size: 17px;
+            color: rgb(139, 139, 139);
+        }
+    }
+
+    @media screen and (max-width:385px) {
+        #services h1 {
+            display: block;
+        }
+    }
+
+    /* our service section ends there */
+
+    /* our service section ends there */
+
+    #aboutus {
+        background-color: whitesmoke;
+        box-sizing: border-box;
+        padding: 0px;
+        margin: 0px;
+           }
+
+    #aboutus .heading {
+        font-size: 45px;
+        text-transform: capitalize;
+        color: black;
+        font-weight: bold;
+        text-align: center;
+        padding: 30px;
+
+    }
+
+    #aboutus .container {
+        width: 80%;
+        margin: auto;
+        font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+    }
+
+    #aboutus .matter {
+
+        display: flex;
+        flex-direction: row;
+        justify-content: space-evenly;
+        margin-bottom: 70px;
+
+
+    }
+
+    #aboutus .content {
+
+        color: rgb(105, 105, 105);
+        font-weight: 100;
+        width: 50%;
+        padding: 20px 30px 30px 30px;
+        font-size: 19px;
+        text-align: justify;
+    }
+
+    #aboutus .sli {
+
+        width: 50%;
+        align-items: center;
+        margin: auto;
+        justify-self: center;
+        align-self: center;
+        justify-content: center;
+        padding: 20px;
+    }
+
+    #aboutus li {
+        list-style: none;
+    }
+
+    #aboutus.icon1 {
+        display: flex;
+        flex-direction: row;
+    }
+
+    .ic {
+        padding-right: 0px;
+        display: inline;
+        color: rgb(32, 110, 228);
+    }
+
+    #aboutus .lol {
+        padding: 0px;
+    }
+
+    #aboutus .po {
+        padding-right: 20px;
+        padding-top: 28px;
+    }
+
+    #aboutus hr {
+
+        border: 2px rgb(32, 110, 228) solid;
+        width: 50px;
+        margin: auto;
+        justify-content: center;
+        background-color: rgb(32, 110, 228);
+    }
+
+    #aboutus .slideshow-container {
+        position: relative;
+        width: 100%;
+        overflow: hidden;
+    }
+
+    #aboutus .image-container {
+        display: block;
+        overflow: hidden;
+    }
+
+    #aboutus .image-container .image {
+        width: 100%;
+        max-height: 700px;
+        margin: 0px;
+    }
+
+    #aboutus .prev,
+    .next {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        width: auto;
+        padding: 16px;
+        margin-top: 0px;
+        color: white;
+        font-weight: bold;
+        font-size: 30px;
+        border-radius: 0px 3px 3px 0px;
+        cursor: pointer;
+        user-select: none;
+    }
+
+    #aboutus .next {
+        right: 0px;
+        border-radius: 3px 0px 0px 3px;
+    }
+
+    #aboutus .prev:hover,
+    .next:hover {
+        background-color: black;
+    }
+
+    #aboutus .dot-container {
+        text-align: center;
+    }
+
+    #aboutus .dot {
+        position: inherit;
+        top: -40px;
+        height: 8px;
+        width: 36px;
+        background-color: #bbb;
+        border-radius: 0px;
+        display: inline-block;
+        cursor: pointer;
+        z-index: 1;
+        transition: all .5s;
+    }
+
+    #aboutus .active,
+    .dot:hover {
+        background-color: #555;
+    }
+
+    #aboutus .fade {
+        animation: fade .3s ease-in-out;
+    }
+
+    @keyframes fade {
+        0% {
+            opacity: 0;
+            transform: scale(1);
+        }
+
+        50% {
+            opacity: 0.5;
+            transform: scale(1.1);
+        }
+
+        100% {
+            opacity: 1;
+            transform: scale(1);
+        }
+    }
+
+    @media only screen and (max-width:1495px) {
+        #aboutus .po {
+            padding-right: 20px;
+            padding-top: 8px;
+        }
+
+
+
+    }
+
+    @media only screen and (max-width:1345px) {
+        #aboutus .po {
+
+            padding-top: 4px;
+        }
+
+        #aboutus .content {
+
+            width: 50%;
+            padding-right: 2vw;
+            font-size: 17px;
+            text-align: justify;
+
+        }
+    }
+
+    @media only screen and (max-width:1275px) {
+        #aboutus .po {
+            padding-top: 10px;
+        }
+
+        #aboutus .content {
+
+            width: 50%;
+            padding: 0px;
+            padding-right: 10px;
+            font-size: 17px;
+            text-align: justify;
+            padding-top: 20px;
+        }
+    }
+
+    @media only screen and (max-width:1079px) {
+        #aboutus .matter {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            margin-bottom: 50px;
+        }
+
+        #aboutus .content {
+            width: 79%;
+            margin: auto;
+            justify-self: center;
+            align-self: center;
+            justify-content: center;
+            margin-bottom: 40px;
+            padding: 0px;
+        }
+
+        #aboutus .sli {
+            padding: 0px;
+            width: 80%;
+        }
+
+        #aboutus .po {
+            padding-right: 0px;
+            padding-top: 20px;
+
+        }
+
+    }
+
+    @media only screen and (max-width:700px) {
+        #aboutus .dot {
+            height: 8px;
+            width: 36px;
+        }
+
+        #aboutus .prev,
+        .next {
+            padding: 16px;
+            font-size: 20px;
+        }
+    }
+
+    @media only screen and (max-width:530px) {
+        #aboutus .dot {
+            height: 4px;
+            width: 30px;
+        }
+
+        #aboutus .prev,
+        .next {
+            padding: 10px;
+            font-size: 15px;
+        }
+    }
+
+    @media only screen and (max-width:300px) {
+        #aboutus .content {
+            color: rgb(105, 105, 105);
+            font-weight: 100;
+            width: 100%;
+            padding: 0px;
+            font-size: 17px;
+            text-align: justify;
+        }
+
+        #aboutus .sli {
+            width: 100%;
+        }
+    }
+
+    #team .container {
+        width: 100%;
+        position: relative;
+        display: flex;
+        justify-content: center;
+        flex-wrap: wrap;
+        min-height: auto;
+        background: whitesmoke;
+        padding-top: 7%;
+        padding-bottom: 7%;
+        font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+
+    }
+
+    #team img {
+        width: 270px;
+        height: 270px;
+
+    }
+
+    #team .line {
+        color: rgb(32, 110, 228);
+        border: 2px rgb(32, 110, 228) solid;
+        width: 50px;
+        background-color: rgb(32, 110, 228);
+        margin: auto;
+        justify-content: center;
+    }
+
+    #team .row {
+        max-width: 1300px;
+    }
+
+    #team .cards {
+        display: flex;
+        flex-wrap: wrap;
+        margin: 0px 20px 0px 20px;
+    }
+
+    #team .card {
+        background-color: rgb(247, 244, 244);
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        margin: 20px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        max-width: 270px;
+        transition: transform .2s;
+        /* Animation */
+
+    }
+
+    #team .picture {
+        align-items: center;
+        margin: auto;
+        justify-content: center;
+        overflow: hidden;
+        transition: transform .2s;
+        /* Animation */
+    }
+
+    #team .name {
+        font-size: 24px;
+        padding-top: 23px;
+      
+        font-weight: bold;
+        color: #353535;
+        text-transform: capitalize;
+    }
+
+    #team .content {
+        text-align: center;
+    }
+
+    #team .dis {
+        margin: 0 0 5px 0;
+        color: #353535;
+        font-size: 12px;
+        padding: 10px;
+      
+        color: #353535;
+        padding-top: 9px;
+        color: #353535;
+    }
+
+    #team .work {
+       
+        color: #353535;
+        padding-top: 9px;
+        padding-bottom: 20px;
+        color: #353535;
+        text-transform: capitalize;
+    }
+
+    #team h1 {
+        text-align: center;
+        font-size: 40px;
+     
+        text-transform: capitalize;
+        color: rgb(10, 6, 3);
+        letter-spacing: 2px;
+        padding: 40px 39px 30px;
+    }
+
+    #team .description {
+        margin: auto;
+        justify-content: center;
+        text-align: center;
+        margin-top: 80%;
+    }
+
+    #team .fa {
+        color: white;
+        font-size: 20px;
+        width: 40px;
+        text-align: center;
+        text-decoration: none;
+        background-color: rgba(32, 32, 32, 0.767);
+        padding: 5px;
+        margin: 6px;
+    }
+
+    #team .card {
+        position: relative;
+        cursor: pointer;
+    }
+
+    #team .overlay {
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: transparent;
+        overflow: hidden;
+        width: 0;
+        height: 100%;
+        transition: .5s ease;
+    }
+
+    #team .card:hover .overlay {
+        bottom: 0;
+        width: 20%;
+
+    }
+
+    #team .card:hover {
+        transform: scale(1.05);
+    }
+
+    /* #team .picture:hover{
+        transform: scale(1.05);
+    } */
+
+    #team .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 10%;
+        left: 10%;
+        -webkit-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+        white-space: nowrap;
+    }
+
+    #team .disp {
+        color: #353535;
+        font-size: 17px;
+        text-align: center;
+        padding-bottom: 15px;
+    }
+
+    @media only screen and (max-width:1284px) {
+        #team img {
+            width: 240px;
+            height: 240px;
+        }
+
+        #team .card {
+            max-width: 240px;
+        }
+
+    }
+
+    @media only screen and (max-width:1165px) {
+        #team img {
+            width: 350px;
+            height: 350px;
+        }
+
+        #team .card {
+            max-width: 350px;
+        }
+
+        #team .cards {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #team .fa {
+            font-size: 25px;
+            width: 40px;
+            text-align: center;
+            text-decoration: none;
+            padding: 5px;
+        }
+    }
+
+    @media only screen and (max-width:784px) {
+        #team img {
+            width: 250px;
+            height: 250px;
+        }
+
+        #team .card {
+            max-width: 250px;
+        }
+
+        #team .cards {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #team .fa {
+            font-size: 20px;
+            width: 40px;
+            padding: 5px;
+        }
+    }
+
+    @media only screen and (max-width:600px) {
+        #team img {
+            width: 300px;
+            height: 300px;
+        }
+
+        #team .card {
+            max-width: 300px;
+        }
+
+        #team .cards {
+            display: flex;
+            margin: auto;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        #team .fa {
+            font-size: 20px;
+            width: 40px;
+            padding: 7px;
+        }
+    }
+
+    @media only screen and (max-width:360px) {
+        #team img {
+            width: 220px;
+            height: 220px;
+        }
+
+        #team .card {
+            max-width: 300px;
+            margin: 20px 0px 20px 0px;
+        }
+
+        #team .fa {
+            font-size: 15px;
+            width: 30px;
+        }
+    }
+
+    #footer BODY {
+        min-height: 100vh;
+        background-color: rgb(80, 78, 78);
+    }
+    #footer .container {
+        width: 100%;
+
+        display: flex;
+        justify-content: center;
+        background-color: rgb(49, 48, 48);
+        font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+    }
+
+    #footer .row {
+        max-width: 1500px;
+
+    }
+
+    #footer .cards {
+        display: flex;
+        flex-wrap: wrap;
+
+        padding-bottom: 40px;
+    }
+
+    #footer .card1 {
+        background-color: rgb(49, 48, 48);
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        width: 407px;
+        height: auto;
+        padding: 10px;
+    }
+
+    #footer .card2 {
+        background-color: rgb(49, 48, 48);
+        justify-content: center;
+        align-items: center;
+        justify-self: center;
+        width: 407px;
+        height: auto;
+        padding: 10px;
+    }
+
+    #footer .name {
+        font-size: 40px;
+        margin-bottom: 32px;
+       
+        font-weight: bold;
+        color: #ffffff;
+        text-transform: capitalize;
+    }
+
+    #footer .content1 {
+        padding-top: 114px;
+
+    }
+
+    #footer .content {
+        padding-top: 40px;
+
+    }
+
+    #footer .work {
+
+        color: #e0dddd;
+        font-size: 16px;
+        padding-top: 6px;
+        padding-bottom: 20px;
+        text-transform: capitalize;
+    }
+
+    #footer h1 {
+        text-align: center;
+        font-size: 40px;
+        font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+        text-transform: capitalize;
+        color: rgb(10, 6, 3);
+        letter-spacing: 2px;
+        font-weight: bold;
+        padding: 10px;
+    }
+
+    #footer .description {
+        margin: auto;
+
+        text-align: left;
+        margin-top: 80%;
+    }
+
+    #footer .address {
+        color: white;
+     
+        margin-bottom: 20px;
+    }
+
+    #footer .con {
+        color: rgb(143, 142, 142);
+     
+
+    }
+
+    #footer .fa {
+        padding: 4px;
+        font-size: 20px;
+        width: 35px;
+        margin-right: 10px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        background-color: rgb(85, 85, 85);
+        margin-top: 20px;
+    }
+
+    #footer .loco {
+        display: inline;
+        font-size: 14px;
+        color: white;
+    }
+
+    #footer .tele {
+        font-size: 14px;
+        color: white;
+
+    }
+
+    #footer .line {
+        color: rgb(32, 110, 228);
+        border: 2px rgb(32, 110, 228) solid;
+        width: 50px;
+        background-color: rgb(32, 110, 228);
+
+    }
+    #footer .address a{
+        color: white;
+    }
+
+    @media only screen and (max-width:1230px) {
+        #footer .card1 {
+            width: 100%;
+            text-align: center;
+
+        }
+
+        #footer .card2 {
+            width: 50%;
+            text-align: justify;
+            padding: 2vw 7vw 2vw;
+
+        }
+
+        #footer .content1 {
+            padding: 0px;
+        }
+
+        #footer .line {
+            margin: auto;
+            justify-content: center;
+        }
+
+        #footer .name {
+            font-size: 40px;
+            margin-bottom: 10px;
+
+        }
+
+    }
+
+    @media only screen and (max-width:873px) {
+        #footer .card1 {
+            width: 100%;
+            text-align: left;
+            padding: 2vw 7vw 2vw;
+
+        }
+
+        #footer .card2 {
+            width: 100%;
+            padding: 2vw 7vw 2vw;
+        }
+
+        #footer .line {
+            justify-content: left;
+            text-align: left;
+            align-self: left;
+            justify-items: left;
+        }
+    }
+
+    .dealbig {
+
+        display: flex;
+
+    }
+
+    .dealbody {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+
+
+    }
+
+    .dealcontainer {
+        width: 1300px;
+        display: flex;
+        justify-content: space-evenly;
+        padding: 20px;
+        flex-direction: column;
+        font-family: 'Open Sans', sans-serif;
+font-family: 'Poppins', sans-serif;
+
+
+    }
+
+    .dealcontainer .dealcard {
+        position: relative;
+        display: flex;
+        width: 40%;
+        height: auto;
+        padding: 40px;
+        box-shadow: 0 10px 30px rgb(0, 0, 0, .1);
+        overflow: hidden;
+        margin: 20px;
+
+    }
+
+    .dealline {
+        color: rgb(32, 110, 228);
+        border: 2px rgb(32, 110, 228) solid;
+        width: 50px;
+        background-color: rgb(32, 110, 228);
+        margin: auto;
+        justify-content: center;
+    }
+
+    .dealcontainer .dealcard:before {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: calc(-100% + 4px);
+        width: 100%;
+        height: 100%;
+        background-color: #000;
+        z-index: 1;
+        transition: 0.3s ease-in-out;
+
+    }
+
+    .dealcontainer .dealcard:nth-child(1)::before {
+        background: rgb(32, 32, 32);
+    }
+
+    .dealcontainer .dealcard:nth-child(2)::before {
+        background:rgb(32, 32, 32);
+    }
+
+    .dealcontainer .dealcard:nth-child(3)::before {
+        background: rgb(32, 32, 32);
+    }
+
+    .dealcontainer .dealcard:hover::before {
+        bottom: 0;
+        transform: scale(-.9);
+    }
+
+    .dealcontainer .dealcard div {
+        position: relative;
+        z-index: 1;
+    }
+
+    .dealcontainer .dealcard div h2 {
+        margin-bottom: 10px;
+        font-size: 35px;
+        transition: .5s;
+        color: rgb(0, 0, 0);
+        display: inline;
+        text-transform: capitalize;
+    }
+
+    .dealcontainer .dealcard div p {
+        margin-bottom: 18px;
+        transition: .5s;
+        text-align: left;
+        color: rgb(63, 63, 63);
+        margin-top: 10px;
+    }
+
+    .dealcard:hover div h2,
+    .dealcard:hover div p {
+        color: white;
+    }
+
+    .dealheading {
+        text-transform: capitalize;
+        text-align: center;
+        font-size: 45px;
+        padding: 20px;
+        margin-bottom: 30px;
+    }
+
+    .fa-bullhorn,
+    .fa-dollar-sign,
+    .fa-percentage {
+        color: rgb(38, 103, 245);
+        font-size: 30px;
+        display: inline;
+        margin-right: 10px;
+    }
+
+
+    @media screen and (max-width:1000px) {
+        .dealcontainer {
+            padding: 10px;
+        }
+    }
+
+    @media screen and (max-width:770px) {
+        .dealbig {
+
+            flex-direction: column;
+
+        }
+
+        .dealcontainer {
+            padding: 20px;
+        }
+
+        .dealcontainer .dealcard {
+            position: relative;
+            display: flex;
+            width: auto;
+        }
+
+        .dealcontainer .dealcard:hover::before {
+            bottom: 0;
+            transform: scale(-.93);
+        }
+    }
+
+    @media screen and (max-width:270px) {
+        .dealcontainer {
+            padding: 0px;
+        }
+    }
+    @media only screen and (max-width:369px) {
+        #footer .card1 {
+            padding: 2vw 2vw 2vw;
+        }
+        #footer .card2 {
+            padding: 2vw 2vw 2vw;
+        }
+        #services .heading h1 {
+    font-size: 30px;
+    color: black;
+}
+#aboutus .heading {
+    font-size: 35px;
+}
+.dealheading {
+    font-size: 30px;
+}
+#team h1 {
+    font-size: 35px;
+}
+#footer .name {
+    font-size: 35px;
+    }
+    .dealcontainer .dealcard div h2 {
+        
+        font-size: 30px;
+        
+    }
+    }
+</style>
+
+<body>
+    <!-- section of navigation bar -->
+    <section id=navigation>
+        <nav>
+            <input type="checkbox" id="check">
+            <label for="check" class="checkbtn">
+                <i class="fa">&#xf039;</i>
+            </label>
+            <label class="logo1">Srivas Developer</label>
+            <label class="logo2">SD</label>
+            <ul>
+                <li><a href="" class="hidd">Srivas Developer</a></li>
+                <li><a href="#sec1" class="active ho">Home</a></li>
+                <li><a href="#sec2" class="ho">Services</a></li>
+                <li><a href="#sec3" class="ho">About us</a></li>
+                <li><a href="#sec6" class="ho">deals</a></li>
+                <li><a href="#sec5" class="ho">Contact</a></li>
+            </ul>
+        </nav>
+    </section>
+    <!-- section of navigation bar end -->
+    <div class="parallax" id="sec1">
+        <div class="set">
+
+            <div class="part1">
+                <h1 class="mid1">Free Lancing
+                    <span class="txt-rotate" data-period="2000"
+                        data-rotate='[ "nerdy", "simple", "riveting", "exciting", "fun!" ]'></span>
+                </h1>
+                <h2 class="mid2">A single &lt;span&gt; is all you need.</h2>
+            </div>
+
+
+        </div>
+    </div>
+    <div class="box2" id="sec2">
+        <section id="services">
+            <div class="container">
+                <div class="heading">
+
+                    <h1>
+                        What We Offer
+                        <hr class="line">
+                    </h1>
+                </div>
+                <div class="row">
+                    <div class="card btn-1">
+                        <div class="classheader">
+
+                            <i class="fa fa-diamond" style="font-size:30px"></i>
+                            <h1>Web Development</h1>
+                        </div>
+                        <div class="icon"></div>
+                        <div class="cardbody">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus labore tempore
+                                adipisci
+                                excepturi doloribus pariatur vel beatae est, voluptatum sequi molestiae ut nostrum
+                                voluptatem
+
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="card btn-1">
+                        <div class="classheader">
+                            <i class="fa fa-rocket" style="font-size:30px;"></i>
+                            <h1>Graphic Design</h1>
+                        </div>
+                        <div class="cardbody">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus labore tempore
+                                adipisci
+                                excepturi doloribus pariatur vel beatae est, voluptatum sequi molestiae ut nostrum
+                                voluptatem
+
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="card btn-1">
+                        <div class="classheader">
+                            <i class="fa fa-cogs" style="font-size:30px"></i>
+                            <h1>Creative Idea</h1>
+                        </div>
+                        <div class="cardbody">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus labore tempore
+                                adipisci
+                                excepturi doloribus pariatur vel beatae est, voluptatum sequi molestiae ut nostrum
+                                voluptatem
+
+                            </p>
+
+                        </div>
+                    </div>
+                    <div class="card btn-1">
+                        <div class="classheader">
+                            <i class="fa fa-pencil" style="font-size:30px"></i>
+                            <h1>Brand Design</h1>
+                        </div>
+
+                        <div class="cardbody">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus labore tempore
+                                adipisci
+                                excepturi doloribus pariatur vel beatae est, voluptatum sequi molestiae ut nostrum
+                                voluptatem
+
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="card btn-1">
+                        <div class="classheader">
+                            <i class="fa fa-handshake-o" style="font-size:30px"></i>
+                            <h1>Awesome Support</h1>
+                        </div>
+
+                        <div class="cardbody">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus labore tempore
+                                adipisci
+                                excepturi doloribus pariatur vel beatae est, voluptatum sequi molestiae ut nostrum
+                                voluptatem
+
+                            </p>
+
+                        </div>
+
+                    </div>
+                    <div class="card btn-1">
+                        <div class="classheader">
+                            <i class="fa fa-edit" style="font-size:30px"></i>
+                            <h1>Content Writing</h1>
+                        </div>
+
+                        <div class="cardbody">
+                            <p>
+                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Delectus labore tempore
+                                adipisci
+                                excepturi doloribus pariatur vel beatae est, voluptatum sequi molestiae ut nostrum
+                                voluptatem
+
+                            </p>
+
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+    <div class="box2" id="sec3">
+        <div id="aboutus">
+            <div class="container">
+                <div class="heading">
+                    about Us
+                    <hr class="line">
+                </div>
+                <div class="matter">
+                    <div class="content">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Fuga quasi maxime voluptatibus omnis. ,
+                        atque officiis possimus mollitia, nemo totam temporibus amet!
+                        <ul class="lol">
+
+                            <li class="po"><i class="fa fa-check ic" style="font-size:24px"></i>Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit.</li>
+                            <li class="po"><i class="fa fa-check ic" style="font-size:24px"></i>Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit..</li>
+                            <li class="po"><i class="fa fa-check ic" style="font-size:24px"></i>Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit..</li>
+                            <li class="po"><i class="fa fa-check ic" style="font-size:24px"></i>Lorem ipsum dolor sit
+                                amet consectetur adipisicing elit..</li>
+
+                        </ul>
+                    </div>
+                    <div class="sli">
+                        <div class="slideshow-container">
+
+                            <div class="image-container">
+                                <img src="pexels-photo-459654.jpeg" class="image fade" />
+                            </div>
+                            <div class="image-container">
+                                <img src="pexels-photo-459654.jpeg" class="image fade" />
+                            </div>
+                            <div class="image-container">
+                                <img src="pexels-photo-459654.jpeg" class="image fade" />
+                            </div>
+
+                            <a class="prev" onclick="newSlide(-1)">&#10094;</a>
+                            <a class="next" onclick="newSlide(1)">&#10095;</a>
+
+                            <div class="dot-container">
+                                <span class="dot" onclick="currentSlide(1)"></span>
+                                <span class="dot" onclick="currentSlide(2)"></span>
+                                <span class="dot" onclick="currentSlide(3)"></span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+    <div id="sec6">
+        <div class="dealbody">
+            <div class="dealcontainer">
+                <h1 class="dealheading">deals
+                    <hr class="dealline">
+                </h1>
+                <div class="dealbig">
+                    <div class="dealcard">
+                        <div class="dealcontent">
+                            <i class='fas fa-bullhorn '></i>
+                            <h2>free</h2>
+                            <p>we provide absolutly free webpages with full customisation for new budding start up with
+                                free of cost maintainance and updates upto 1 year,also special off on our paid web
+                                pakages.
+                                <!-- <a href="">read more</a> -->
+                        </div>
+                    </div>
+                    <div class="dealcard">
+                        <div class="dealcontent">
+                            <i class='fas fa-dollar-sign'></i>
+                            <h2>cost</h2>
+                            <p>our web package provide full web setup including logo designer with web development in
+                                disasterically low price only 10$ , with free maintainance upto 1 year and charge only
+                                when you want any updates </p>
+                            <!-- <a href="">read more</a> -->
+                        </div>
+                    </div>
+                    <div class="dealcard">
+                        <div class="dealcontent">
+                            <i class='fas fa-percentage'></i>
+                            <h2>offer</h2>
+                            <p>our web package provide full web setup including logo designer with web development in
+                                disasterically low price only 10$ , with free maintainance upto 1 year and charge only
+                                when u want any updates </p>
+                            <!-- <a href="">read more</a> -->
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="box2" id="sec4">
+        <div id="team">
+            <div class="container">
+                <div class="row">
+                    <h1>OUR TEAM
+                        <hr class="line">
+                    </h1>
+                    <div class="disp">
+                        “Talent wins games, but teamwork and intelligence win championships.”  
+                    </div>
+                    <div class="cards">
+                        <div class="card">
+                            <div class="picture">
+                                <img src="team-1.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="name">
+                                    sarthak
+                                </div>
+                                <div class="work">
+                                    web developer
+                                </div>
+
+                                <div class="overlay">
+                                    <div class="description">
+                                        <a href="#" class="fa fa-facebook"></a>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                        <a href="#" class="fa fa-google"></a>
+                                        <a href="#" class="fa fa-linkedin"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="picture">
+                                <img src="team-2.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="name">
+                                    anukriti
+                                </div>
+                                <div class="work">
+                                    graphic designer
+                                </div>
+                                <div class="overlay">
+                                    <div class="description">
+                                        <a href="#" class="fa fa-facebook"></a>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                        <a href="#" class="fa fa-google"></a>
+                                        <a href="#" class="fa fa-linkedin"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="picture">
+                                <img src="team-3.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="name">
+                                    jayash
+                                </div>
+                                <div class="work">
+                                    content creater
+                                </div>
+                                <div class="overlay">
+                                    <div class="description">
+                                        <a href="#" class="fa fa-facebook"></a>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                        <a href="#" class="fa fa-google"></a>
+                                        <a href="#" class="fa fa-linkedin"></a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div class="picture">
+                                <img src="team-4.jpg" alt="">
+                            </div>
+                            <div class="content">
+                                <div class="name">
+                                    barza
+                                </div>
+                                <div class="work">
+                                    web developer
+                                </div>
+                                <div class="overlay">
+                                    <div class="description">
+                                        <a href="#" class="fa fa-facebook"></a>
+                                        <a href="#" class="fa fa-twitter"></a>
+                                        <a href="#" class="fa fa-google"></a>
+                                        <a href="#" class="fa fa-linkedin"></a>
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="box2" id="sec5">
+        <div id="footer">
+            <div class="container">
+                <div class="row">
+                    <div class="cards">
+                        <div class="card1">
+                            <div class="content">
+                                <div class="name">
+                                    srivas developer
+                                    <hr class="line">
+                                    </h1>
+                                </div>
+                                <div class="work">
+                                    under srivas corporation.ptv
+                                </div>
+                                <div class="address">
+                                    <a href="#sec1">Home</a> | <a href="#sec2">Services</a> | <a href="#sec6">Deal</a> | <a href="#sec3">About</a>
+                                        
+                                </div>
+                                <div class="con">
+                                    copyright law makes it possible for you to enforce
+                                    your rights, copyright law makes it possible for you to enforce
+                                    your rights
+                                </div>
+                            </div>
+                        </div>
+                        <div class="card2">
+                            <div class="content1">
+                                <i class="fa fa-map-marker""></i>
+                            <div class=" loco">Head Office - Srivas Corporation <br>
+                                    309 - Rupa Solitaire,
+                                    Bldg. No. A - 1, Sector - 1
+                                    Mahape, Navi Mumbai - 400710
+                            </div>
+                            <div class="tele">
+                                <i class="fa fa-phone"></i>
+                                +91 22-27782183,+91 22-27782183
+                            </div>
+                            <div class="socials">
+                                <a href="#" class="fa fa-facebook"></a>
+                                <a href="#" class="fa fa-twitter"></a>
+                                <a href="#" class="fa fa-google"></a>
+                                <a href="#" class="fa fa-linkedin"></a>
+                                <a href="#" class="fa fa-instagram"></a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="card2">
+                        <div class="content1">
+                            <i class="fa fa-map-marker""></i>
+                            <div class=" loco">Branch Office - Srivas Developer<br>
+                                309 - Rupa Solitaire,
+                                Bldg. No. A - 1, Sector - 1
+                                Mahape, Navi Mumbai - 400710
+                        </div>
+                    </div>
+                    <div class="tele">
+                        <i class="fa fa-phone"></i>
+                        +91 22-27782183,+91 22-27782183
+                    </div>
+                    <div class="socials">
+                        <a href="#" class="fa fa-facebook"></a>
+                        <a href="#" class="fa fa-twitter"></a>
+                        <a href="#" class="fa fa-google"></a>
+                        <a href="#" class="fa fa-linkedin"></a>
+                        <a href="#" class="fa fa-instagram"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </div>
+    </div>
+
+</body>
+<script>
+    $(document).ready(function () {
+        // Add smooth scrolling to all links
+        $("a").on('click', function (event) {
+
+            // Make sure this.hash has a value before overriding default behavior
+            if (this.hash !== "") {
+                // Prevent default anchor click behavior
+                event.preventDefault();
+
+                // Store hash
+                var hash = this.hash;
+
+                // Using jQuery's animate() method to add smooth page scroll
+                // The optional number (800) specifies the number of milliseconds it takes to scroll to the specified area
+                $('html, body').animate({
+                    scrollTop: $(hash).offset().top
+                }, 800, function () {
+
+                    // Add hash (#) to URL when done scrolling (default click behavior)
+                    window.location.hash = hash;
+                });
+            } // End if
+        });
+    });
+</script>
+<script>
+    var slideNo = 1;
+    Carousel(slideNo);
+
+    function Carousel(n) {
+        var slides = document.getElementsByClassName("image-container");
+        var dots = document.getElementsByClassName("dot");
+        if (n > slides.length) {
+            slideNo = 1;
+        }
+        if (n < 1) {
+            slideNo = slides.length;
+        }
+        for (var i = 0; i < slides.length; i++) {
+            slides[i].style.display = "none";
+        }
+        slides[slideNo - 1].style.display = "block";
+        for (var i = 0; i < dots.length; i++) {
+            dots[i].className = dots[i].className.replace(" active", "");
+        }
+        dots[slideNo - 1].className += " active";
+
+    }
+    function newSlide(n) {
+        Carousel(slideNo += n);
+    }
+    function currentSlide(n) {
+        Carousel(slideNo = n);
+    }
+
+</script>
+
+</html>
